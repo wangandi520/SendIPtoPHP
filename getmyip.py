@@ -18,8 +18,10 @@ if newip != oldip:
 	newfile = open('ip.txt', mode = 'w', encoding = 'UTF-8')
 	newfile.writelines(newip)
 	newfile.close()
-
-mygit = git.Git('.')
-mygit.add('ip.txt')
-mygit.commit('-m ' + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
-mygit.push()
+	mygit = git.Git('.')
+	mygit.add('ip.txt')
+	mygit.commit('-m ' + time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()))
+	mygit.push()
+if newip == oldip:
+	mygit = git.Git('.')
+	mygit.push()
