@@ -1,4 +1,10 @@
 ---
+
+## 到github
+
+把python文件放到crontab -e中定时运行，注意是绝对路径
+
+
 ## 路由器上，at router
 
 /etc/storage/ddns.sh
